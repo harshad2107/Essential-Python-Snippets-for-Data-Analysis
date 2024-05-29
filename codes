@@ -1,0 +1,22 @@
+# csv/tsv files
+df = pd.read_csv(r"csv_file_path")
+
+# Excel Fiel
+df = pd.read_excel(r"excel_file_path")
+
+# Reading Binary Excel File
+pip install pyxlsb
+df = pd.read_excel(r"binary_excel_file_path", engine='pyxlsb')
+
+# JSON File
+df = pd.read_json(r"json_file_path")
+
+# Reading a Parquet file
+df = pd.read_parquet(r"parquet_file_path")
+
+# HTML file
+df_list = pd.read_html(html_file_path)
+df_html = df_list[0]
+
+# xml file
+df = pd.read_xml(r"xml_file_path")
