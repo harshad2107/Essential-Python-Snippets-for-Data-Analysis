@@ -20,3 +20,31 @@ df_html = df_list[0]
 
 # xml file
 df = pd.read_xml(r"xml_file_path")
+
+
+
+
+
+
+
+
+
+## When you face encoding error while reading files
+
+encoding="utf-8"
+
+encoding="ISO-8859-1"
+
+encoding="ascii"
+
+encoding="utf-16"
+
+encoding="windows-1252"
+
+
+
+
+
+
+
+
