@@ -29,17 +29,19 @@ df = pd.read_xml(r"xml_file_path")
 
 
 
-## When you face encoding error while reading files
+## When you face encoding error
 
-encoding="utf-8"
+df = pd.read_csv(r"csv_file_path",encoding="ISO-8859-1")
 
-encoding="ISO-8859-1"
+encoding="utf-8" # Use utf-8 when you are dealing with text files that include characters from various languages, emojis, or any other Unicode characters.
 
-encoding="ascii"
+encoding="ISO-8859-1" # Use ISO-8859-1 when you are working with text files that are specifically in Western European languages, especially if the files are older or come from older systems that used this encoding.
 
-encoding="utf-16"
+encoding="ascii" # Use ascii only when you are certain that your text file contains only basic English characters and no special characters or accents
 
-encoding="windows-1252"
+encoding="utf-16" #  Use utf-16 when you are dealing with text files that require a large character set, such as files that include many different languages and symbols.
+
+encoding="windows-1252" # Use windows-1252 when you are dealing with text files from Windows systems that are in Western European languages and include characters not covered by ISO-8859-1.
 
 
 
