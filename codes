@@ -45,8 +45,16 @@ encoding="windows-1252" # Use windows-1252 when you are dealing with text files 
 
 
 
+# Used only when we require specific columns
+usecols=need_cols
+on_bad_lines="skip" = to skip some records that have problem while reading
 
+## When u want to read second sheet in excel    /first_sheet=index=0, second_sheet = index-1
+filr = pd.read_excel(r"C:\Users\ISFL-44577\Downloads\SEP_Summary.xlsx",sheet_name=1)
 
+## Give column names
+br1.columns=colum_name 
+colum_name =['SegmentID_Client','MemberID','BranchID','GroupID','SubGroupID']
 
 
 
