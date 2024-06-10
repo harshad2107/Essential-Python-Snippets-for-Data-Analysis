@@ -1,3 +1,4 @@
+                                                ## READING FILES ## 
 # csv/tsv files
 df = pd.read_csv(r"csv_file_path")
 
@@ -22,13 +23,6 @@ df_html = df_list[0]
 df = pd.read_xml(r"xml_file_path")
 
 
-
-
-
-
-
-
-
 ## When you face encoding error
 
 df = pd.read_csv(r"csv_file_path",encoding="ISO-8859-1")
@@ -44,7 +38,6 @@ encoding="utf-16" #  Use utf-16 when you are dealing with text files that requir
 encoding="windows-1252" # Use windows-1252 when you are dealing with text files from Windows systems that are in Western European languages and include characters not covered by ISO-8859-1.
 
 
-
 # Used only when we require specific columns
 usecols=need_cols
 on_bad_lines="skip" = to skip some records that have problem while reading
@@ -57,4 +50,10 @@ br1.columns=colum_name
 colum_name =['SegmentID_Client','MemberID','BranchID','GroupID','SubGroupID']
 
 
+                                     
+                                                     ## Understanding the Dataset ##
 
+df.shape
+df.sample(5)
+df.duplicated().sum()
+df.describe()
