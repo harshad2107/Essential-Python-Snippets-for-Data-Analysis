@@ -57,3 +57,16 @@ df.shape
 df.sample(5)
 df.duplicated().sum()
 df.describe()
+
+
+                                                    ## Handiling and Finding duplicates ##
+
+# Duplicates in specific column
+df['ACCOUNT_NUMBER'].duplicated()
+
+# When u want both duplicates
+both_acc_dupli = df[df.duplicated(subset='Account_no',keep=False)]
+
+# To remove duplicates
+df.drop_duplicates('Account_No',keep='first',inplace=True)
+
