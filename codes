@@ -70,3 +70,28 @@ both_acc_dupli = df[df.duplicated(subset='Account_no',keep=False)]
 # To remove duplicates
 df.drop_duplicates('Account_No',keep='first',inplace=True)
 
+
+
+## PIVOT Table
+
+pivot_table3 = pd.pivot_table(df_june, 
+                              index='ACCOUNT_NBR', 
+                              values='current_balance', 
+                              aggfunc={'ACCOUNT_NBR': 'count', 'current_balance': 'sum'})
+pivot_table3 = pivot_table3.rename(columns={'account_number': 'Count', 'current_balance': 'Sum'})
+print(pivot_table3)
+
+
+
+df1_192_final = df1_192.pivot_table(index=['AccountID_with_s'],values=['ExcessPaid_april'],aggfunc='sum')
+
+
+
+pivot_table.reset_index(inplace=True)
+
+#
+incomechange[(incomechange['ClosedDate'] <= '31 May 2024')&(incomechange['CurrentprincipalOutstanding']>0)]['Closure Type'].value_counts()
+
+#
+incomechange[incomechange['Closure Type'].notnull()]['LoanStatusID'].value_counts()
+
