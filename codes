@@ -153,6 +153,5 @@ dump['cycle_date'] = pd.to_datetime(dump['cycle_date'], format='%Y%m%d')
 # Find the minimum and maximum dates
 min_date = dump['cycle_date'].min()
 max_date = dump['cycle_date'].max()
-
 print(f"Minimum Date: {min_date}")
 print(f"Maximum Date: {max_date}")
