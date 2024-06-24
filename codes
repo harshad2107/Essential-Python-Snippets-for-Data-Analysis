@@ -114,13 +114,15 @@ df.drop_duplicates('Account_No',keep='first',inplace=True)
 
 
                                           ## PIVOT Tables to deep dive into Dataset ##
+## Pivot table for simple representation
+## df_june = dataset name
 
-pivot_table3 = pd.pivot_table(df_june, 
+pivot_table = pd.pivot_table(df_june, 
                               index='ACCOUNT_NBR', 
                               values='current_balance', 
                               aggfunc={'ACCOUNT_NBR': 'count', 'current_balance': 'sum'})
-pivot_table3 = pivot_table3.rename(columns={'account_number': 'Count', 'current_balance': 'Sum'})
-print(pivot_table3)
+pivot_table = pivot_table.rename(columns={'account_number': 'Count', 'current_balance': 'Sum'})
+print(pivot_table)
 
 
 
