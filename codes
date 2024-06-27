@@ -142,11 +142,12 @@ incomechange[incomechange['Closure Type'].notnull()]['LoanStatusID'].value_count
 
                                                 ## Dates Conversion ##
 
+
 # If date format is 2020-09-29 and want to convert it into 29-09-2020 then 
 matchingdateess['FirstDisbursementDate'] = pd.to_datetime(matchingdateess['FirstDisbursementDate'])
 matchingdateess['FirstDisbursementDate'] = matchingdateess['FirstDisbursementDate'].dt.strftime('%d-%m-%Y')
 
-#for matching dates from one dataframe
+# for matching dates from one dataframe
 matchingdates = needdate[needdate['SVC_CNCT_DT']==needdate['DisbursementDate']]
 
 # Convert the 'date' column to a datetime format
