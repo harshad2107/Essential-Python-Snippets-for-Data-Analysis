@@ -154,6 +154,7 @@ matchingdates = needdate[needdate['SVC_CNCT_DT']==needdate['DisbursementDate']]
 dump['cycle_date'] = pd.to_datetime(dump['cycle_date'], format='%Y%m%d')
 
 # Find the minimum and maximum dates
+
 min_date = dump['cycle_date'].min()
 max_date = dump['cycle_date'].max()
 
