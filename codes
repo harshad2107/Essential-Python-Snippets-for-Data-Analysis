@@ -158,3 +158,6 @@ dump['cycle_date'] = pd.to_datetime(dump['cycle_date'], format='%Y%m%d')
 min_date = dump['cycle_date'].min()
 max_date = dump['cycle_date'].max()
 
+## To find total null values in all Columns
+monthcdf.isna().sum()
+
