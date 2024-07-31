@@ -165,4 +165,9 @@ monthcdf.isna().sum()
 df['ACCT_NBR'] = df['ACCT_NBR'].astype(str)
 df['ACCT_NBR'].str.len().value_counts()
 
-## 
+# Remove special charactertics 
+
+excluded_DATA['Bank account number'] = excluded_DATA['Bank account number'].str.replace(r'\W', '')
+
+# Remove leading and trail space 
+excluded_DATA['Bank account number'] = excluded_DATA['Bank account number'].str.strip()
