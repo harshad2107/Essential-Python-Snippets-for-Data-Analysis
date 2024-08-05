@@ -171,3 +171,12 @@ excluded_DATA['Bank account number'] = excluded_DATA['Bank account number'].str.
 
 # Remove leading and trail space 
 excluded_DATA['Bank account number'] = excluded_DATA['Bank account number'].str.strip()
+
+# Mapping Values
+status_mapping = {
+    'Active Loan': 'S04','NPA': 'S05','Net-Off': 'S07',
+    'Write Off': 'S06','Fully Paid': 'S07','Paid Off': 'S07',
+    'Insurance Paid Off': 'S07','Cancelled': 'S15','S10':'S10'}
+
+## Map loan_status to ACCOUNT_STATUS using the mapping dictionary
+monthcdf['Corrected_Status'] = monthcdf['Corrected_Status'].map(status_mapping)
