@@ -180,3 +180,5 @@ status_mapping = {
 
 ## Map loan_status to ACCOUNT_STATUS using the mapping dictionary
 monthcdf['Corrected_Status'] = monthcdf['Corrected_Status'].map(status_mapping)
+
+## 
