@@ -7,6 +7,6 @@ In this repository, you'll find a collection of fundamental Python code snippets
 
 Points and Codes Covered
 1. Reading all types of files
-2. Understanding the Dataset
-   2.1 - Finding and Handling Duplicates
-   2.2 - 
+2. Understanding the Datasst by Visualization
+3. Finding and Handling Duplicates
+4.  
