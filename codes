@@ -51,7 +51,7 @@ colum_name =['SegmentID_Client','MemberID','BranchID','GroupID','SubGroupID']
 
 
                                      
-                                                     ## Understanding the Dataset ##
+                                            ## Understanding the Dataset By Visualization ##
 
 df.shape
 df.sample(5)
