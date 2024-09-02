@@ -153,7 +153,7 @@ matchingdates = needdate[needdate['SVC_CNCT_DT']==needdate['DisbursementDate']]
 # Convert the 'date' column to a datetime format
 dump['cycle_date'] = pd.to_datetime(dump['cycle_date'], format='%Y%m%d')
 
-# Find the minimum and maximum dates
+                                        # Find the minimum and maximum dates
 
 min_date = dump['cycle_date'].min()
 max_date = dump['cycle_date'].max()
@@ -165,14 +165,14 @@ monthcdf.isna().sum()
 df['ACCT_NBR'] = df['ACCT_NBR'].astype(str)
 df['ACCT_NBR'].str.len().value_counts()
 
-# Remove special charactertics 
+                                             # Remove special charactertics ##
 
 excluded_DATA['Bank account number'] = excluded_DATA['Bank account number'].str.replace(r'\W', '')
 
 # Remove leading and trail space 
 excluded_DATA['Bank account number'] = excluded_DATA['Bank account number'].str.strip()
 
-# Mapping Values
+                                             # Mapping Values ##
 status_mapping = {
     'Active Loan': 'S04','NPA': 'S05','Net-Off': 'S07',
     'Write Off': 'S06','Fully Paid': 'S07','Paid Off': 'S07',
@@ -181,3 +181,4 @@ status_mapping = {
 ## Map loan_status to ACCOUNT_STATUS using the mapping dictionary
 monthcdf['Corrected_Status'] = monthcdf['Corrected_Status'].map(status_mapping)
 
+                                         ## Dropping columns and Renameing Columns ##
