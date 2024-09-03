@@ -9,4 +9,5 @@ Points and Codes Covered
 1. Reading all types of files
 2. Understanding the Datasst by Visualization
 3. Finding and Handling Duplicates
-4.  
+4. Deepdive into Dataset through Pivot Tables
+5. 
